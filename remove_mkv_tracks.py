@@ -1,12 +1,28 @@
+# coding=utf-8
+"""
+Script that is used to remove/keep specific tracks of a series
+of mkv video files. This is especially useful when all the mkvs
+have similar structures, and that for instance one only wants to
+keep the main video track, the english audio and the french subs.
+
+This script uses the two binaries mkvmerge and mkvinfo that can
+be downloaded from MKVToolNix website. 
+
+Usage:
+remove_mkv_tracks.py --interactive [--mkvmergepath </path/to/mkvmerge>]
+
+Author : Côme Weber
+"""
+
 import getopt
 import glob
 import os
 import sys
 import subprocess
 
-HELPCMD = "remove_mkv_tracks.py --interactive --mkvmergepath </path/to/mkvmerge>"
+HELPCMD = "remove_mkv_tracks.py --interactive [--mkvmergepath </path/to/mkvmerge>]"
 
-MKVMERGE = "/Applications/MKVToolNix-9.2.0.app/Contents/MacOS/mkvmerge"
+MKVMERGE = "/Applications/MKVToolNix-9.2.0.app/Contents/MacOS/mkvmerge" # default mkvmerge/mkvinfo path
 
 def main(argv):
 

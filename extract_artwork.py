@@ -1,16 +1,24 @@
 # coding=utf-8
 '''
 Script that looks for album recursively to extract the cover image from mp3s
-and places it inside the album directory as a cover.jpg file.
-This is done for compatibility issues with some music library software like DSAudio.
-author : Côme Weber
+and places it inside the album directory as a folder.jpg file.
+This is done for compatibility issues with some music library softwares like DSAudio.
+
+Usage:
+
+extract_artwork.py -f <pathname> [-r] [-F]
+
+-f <pathname> : folder that should be inspected
+-r : activate recursion (off by default)
+-F : force 'folder.jpg' overwrite
+
+Author : Côme Weber
 '''
 
 import getopt
 import glob
 import os
 import re
-
 import mutagen as mut
 import sys
 

@@ -1,3 +1,16 @@
+# coding=utf-8
+"""
+Script that is used to synchronize subtitles on a video, given
+the entry and exit points time references of both the video
+and the subtitles. It outputs two factors that are especially 
+made to be used with Jubler (custom reencoding function).
+
+Usage:
+python compute_subtitle_offset.py
+
+Author : Côme Weber
+"""
+
 print "Timecode must be of the following shape : HH:MM:SS.MMM"
 print "First audio timecode : ",
 a1 = raw_input("")

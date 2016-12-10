@@ -1,3 +1,4 @@
+# coding=utf-8
 """
 Script that merges a multi-CD album into a one CD album (a concatenation of all the CDs)
 	* Sets a common album name
@@ -8,6 +9,8 @@ the user will have to give it interactively
 
 Usage:
 	python reorder_tracks.py [-p </path/to/root/folder>] [-a <new_album_name>]
+
+Author : Côme Weber
 """
 
 

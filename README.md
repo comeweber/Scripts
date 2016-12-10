@@ -22,7 +22,8 @@ It is based on the `mkvmerge` and `mkvinfo` binaries that can be found on [MKVTo
 ##Multi CD Merge
 
 `reorder_tracks.py` is a script used to merge a multi-CD album into a one CD album (a concatenation of all the CDs), with the following actions:
-	* Set a common album name
-	* Update automatically the tracks indices 
+
+* Set a common album name
+* Update automatically the tracks indices 
 
 
