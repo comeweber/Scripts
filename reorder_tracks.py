@@ -15,31 +15,31 @@ Author : Côme Weber
 
 
 from mutagen.easyid3 import EasyID3
-import sys, os, glob, re
+import sys, os, glob, re, getopt
 from shutil import copy,move
 
 HELPCMD = "reorder_tracks.py [-p </path/to/root/folder>] [-a <new_album_name>]"
 
-def main(args):
+def main(argv):
 
 	album=root=None
 
 	try:
-        opts, args = getopt.getopt(args, "hp:a:", ["--path","--album_name","--help"])
-    except getopt.GetoptError as err:
-        print HELPCMD
-        sys.exit(-1)
+		opts, args = getopt.getopt(argv, "hp:a:", ["--path","--album_name","--help"])
+	except getopt.GetoptError as err:
+		print HELPCMD
+		sys.exit(-1)
 
-    for opt, arg in opts:
-        if opt in ("-a","--album_name"):
-           album=arg
-        elif opt in ("-p",'--path'):
-        	root=arg 
-        elif opt in ('-h','--help'):
-        	print HELPCMD
-           
-         
-    if root is None:
+	for opt, arg in opts:
+		if opt in ("-a","--album_name"):
+			album=arg
+		elif opt in ("-p",'--path'):
+			root=arg 
+		elif opt in ('-h','--help'):
+			print HELPCMD
+
+
+	if root is None:
 		#Ask the user, the path of the root folder
 		print "Path to folder containing \"CD1,...\" folders:",
 		root = raw_input().strip()
